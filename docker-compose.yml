@@ -1,0 +1,38 @@
+version: '3'
+services:
+  nginx-container:
+    build:
+      context: .
+      dockerfile: nginx/Dockerfile
+    volumes:
+      - ./nginx/log:/var/log/nginx
+      - ./php/public:/var/www/container/public
+      # - public:/var/www/container/public
+    ports:
+      - '80:80'
+      - 443:443
+    depends_on:
+      - 'php-container'
+
+  php-container:
+    build:
+      context: .
+      dockerfile: php/Dockerfile
+    volumes:
+      - ./php:/var/www/container
+      # - public:/var/www/container/public
+    depends_on:
+      - 'mysql-container'
+
+  mysql-container:
+    image: mysql:5.7
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=test 
+    volumes: 
+      - db-data:/var/lib/mysql
+    ports:
+      - 3306:3306
+volumes:
+  db-data:
+  # public:
