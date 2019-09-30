@@ -6,7 +6,7 @@ RUN apt-get update \
   && apt-get install -y \
   vim\
   zlib1g-dev\
-  mysql-client \
+  default-mysql-client \
   libfreetype6-dev \
   libjpeg62-turbo-dev \
   libpng-dev \
