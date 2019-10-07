@@ -33,5 +33,8 @@ RUN ls
 RUN npm install
 
 #Vuex
-# RUN npm install vuex --save
-# RUN npm install axios --save
+RUN npm install vuex --save
+RUN npm install axios --save
+
+#Wildcard(glob for webpack.min.js)
+RUN npm install glob
