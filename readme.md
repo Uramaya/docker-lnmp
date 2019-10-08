@@ -24,9 +24,9 @@ execute this command
 - php artisan key:generate
 
 ■Search your docker machine(default) ip
-
-docker-machine ip
-In my case >192.168.99.100
+- docker-machine ls
+※docker-machine ip
+　In my case >192.168.99.100
 
 
 ■Open your browser and type 
