@@ -2,6 +2,7 @@ This is the docker file ofr creating hte Laravel(php), Nginx, Mysql environment.
 
 ■Clone this project's repository to your local
 - git clone {{ url }}
+In this project url = "https://github.com/Uramaya/docker-lnmp.git"
 
 ■Move to your new download repository
 - cd {{ New repository you just downloaded }}
