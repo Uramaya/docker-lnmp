@@ -2,7 +2,7 @@ This is the docker file ofr creating hte Laravel(php), Nginx, Mysql environment.
 
 ■Clone this project's repository to your local
 - git clone {{ url }}
-  In this project url = "https://github.com/Uramaya/docker-lnmp.git"
+  >In this project url = "https://github.com/Uramaya/docker-lnmp.git"
 
 ■Move to your new download repository
 - cd {{ New repository you just downloaded }}
@@ -20,12 +20,11 @@ Then after make sure the Docker machine has started
 (If container is ready, the state shows "up")
 - docker-compose ls
 
->              Name                            Command              State                    Ports
--------------------------------------------------------------------------------------------------------------------
-dockerlnmptest_mysql-container_1   docker-entrypoint.sh mysqld     Up      0.0.0.0:3306->3306/tcp, 33060/tcp
-dockerlnmptest_nginx-container_1   nginx -g daemon off;            Up      0.0.0.0:443->443/tcp, 0.0.0.0:80->80/tcp
-dockerlnmptest_php-container_1     docker-php-entrypoint php-fpm   Up      9000/tcp
-
+|  Name  |  Command  | State  | Ports  |
+| ---- | ---- |---- |---- |
+|  dockerlnmptest_mysql-container_1  |  docker-entrypoint.sh mysqld  | Up  | 0.0.0.0:3306->3306/tcp, 33060/tcp  |
+|  dockerlnmptest_nginx-container_1  |  nginx -g daemon off;  | Up  | 0.0.0.0:443->443/tcp, 0.0.0.0:80->80/tcp  |
+|  dockerlnmptest_php-container_1  |  docker-php-entrypoint php-fpm  | Up  | 9000/tcp  |
 
 
 ■Enter to yur php container
